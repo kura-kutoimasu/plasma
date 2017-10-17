@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"/>
+		<title>Bahay Kubo</title>
+		<link rel="icon" href="../assets/images/CodeIgniterLogo.ico"/>
+		<link rel="stylesheet" type="text/css" href="../assets/css/bootstrap.min.css"/>
+		<link rel="stylesheet" type="text/css" href="../assets/css/style.css"/>
+	</head>
+	<body>
+		<div class="content">
+			<h1 id="lvl" hidden></h1>
+			<h1 id="demo" hidden></h1>
+			<h2 id="status" hidden>false</h2>
+			<audio id="bgsound" controls hidden>
+				<source src="../assets/audio/BK.mp3" type="audio/mpeg">
+			</audio>
+			<div style="float:left;margin-top:15px;margin-left:15px">
+				<img id="aimage"src="../assets/images/up.png" style="width:50px;height:50px;"/>
+			</div>
+			<h3 id="aiS" style="color:BLACK;float:right;margin-right:10px">AI: <label id="ai">0</label></h3>
+			<div class="centerscreen">
+
+				<img id="gameimage" src="../assets/images/up.png" style="width:75px;height:75px;margin-left:15px;margin-top:-150px"/>
+
+				<table style="margin-left:-70px;">
+					<tbody>
+						<tr>
+							<td><button disabled hidden></button></td>
+							<td><button id="up" style="height:80px;width:80px;background-image:url('../assets/images/up.png');background-repeat:no-repeat;background-size:75% 75%;background-position:center" onClick="press('up')" disabled></button></td>
+							<td><button disabled hidden></button></td>
+						</tr>
+						<tr>
+							<td><button id="left" style="height:80px;width:80px;background-image:url('../assets/images/left.png');background-repeat:no-repeat;background-size:75% 75%;background-position:center" onClick="press('left')" disabled></button></td>
+							<td><button id="res" style="height:80px;width:80px" onClick="start()">START</button></td>
+							<td><button id="right" style="height:80px;width:80px;background-image:url('../assets/images/right.png');background-repeat:no-repeat;background-size:75% 75%;background-position:center" onClick="press('right')" disabled></button></td>
+						</tr>
+						<tr>
+							<td><button style="visible:false" disabled hidden></button></td>
+							<td><button id="down" style="height:80px;width:80px;background-image:url('../assets/images/down.png');background-repeat:no-repeat;background-size:75% 75%;background-position:center" onClick="press('down')" disabled></button></td>
+							<td><button disabled hidden></button></td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+		<footer class="footer">
+			<h3 id="youS" style="color:BLACK;margin-left:10px">You: <label id="score">0</label></h3>
+		</footer>
+		<script type="text/javascript" src="../assets/js/functions.js"></script>
+		<script type="text/javascript">
+			document.getElementById("lvl").innerHTML = window.name;
+		</script>
+	</body>
+</html>
